@@ -1,0 +1,20 @@
+<% @body_id = 'home-page' %>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render partial: 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+<div id="easy-slider">     <div>         <img src="/assets/image1.jgp _fcksavedurl="URL-IMAGEN" alt="" />     </div>
+
+
+
+
+      <div>         <img src="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" alt="" />     </div>      <div>         <img src="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" alt="" />     </div>      <div>         <img src="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" alt="" />     </div>      <div>         <img src="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" _fcksavedurl="URL-IMAGEN" alt="" />     </div> </div>  
+
+
+<div data-hook="homepage_products">
+  <% cache(cache_key_for_products) do %>
+    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <% end %>
+</div>
+
